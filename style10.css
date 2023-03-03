@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+}
+
+.centre {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+ .rond{
+  position: relative;
+  top: -8rem;
+  left: -10rem;
+  width: 10rem;
+  height: 10rem;
+  color: red;
+  background-color: red;
+  border-radius: 50%;
+}
+.rond2{
+  position: relative;
+  top: -8rem;
+  left: 55rem;
+  width: 10rem;
+  height: 10rem;
+  color: red;
+  background-color: red;
+   border-radius: 50%;
+}
+.btn {
+  position: relative;
+  color: red;
+  display: block;
+  font-size: 100px;
+   text-transform: uppercase;
+  text-decoration: none;
+  margin: 40px 0;
+  padding: 20px 60px;
+  
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 42%;
+  width: 0%;
+  height: 0px;
+  background-color:red;
+  border-radius: 1rem 0rem 0rem 1rem;
+  transition-duration: .1s;
+  transition-timing-function: cubic-bezier(0,.22,1,.99) ;
+   font-size: 100px;
+   color: white;
+   text-transform: uppercase;
+   text-align: end;
+}
+.btn::after{
+  width: 0;
+  height: 0px;
+  content: "";
+  position: absolute;
+   top: 50%;
+  left: 45%;
+  background-color: red;
+   border-radius: 0rem 1rem 1rem 0rem;
+  transition-duration: .1s;
+  transition-timing-function: cubic-bezier(0,.22,1,.99) ;
+  font-size: 100px;
+  color: white;
+  text-transform: uppercase;
+  z-index: -1;
+}
+.btn:hover::before{
+  width: 48%;
+  height: 100px;
+  margin-top: -2.8rem;
+  margin-left: -18rem;
+  z-index: -1;
+}
+.btn:hover::after{
+  width: 52%;
+  height: 100px;
+  margin-top: -2.8rem;
+}
+.btn:hover{
+  color: white;
+}
+.centre:hover  .rond{
+  left: 21rem;
+  transition-duration: 2ms;
+}
+.centre:hover  .rond2{
+  left: 18.7rem;
+  transition-duration: 2ms;
+}
